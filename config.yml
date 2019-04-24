@@ -5,19 +5,19 @@ swipe:
     right: 
       command: 'xdotool key Shift_L+Alt_L+Tab'
     up: 
-      command: 'xdotool key Control_L+F2'
-      threshold: 1.5
+      command: 'xdotool key Control_L+F10'
+      threshold: 0.75
     down: 
       command: 'xdotool key Control_L+F12'
-      threshold: 1.5
+      threshold: 0.75
   4:
-    left: 
-      command: 'xdotool key Alt_LL+Left'
-    right: 
-      command: 'xdotool key Alt_L+Right'
     up: 
-      command: 'xdotool key Control_L+Tab'
+      command: 'xdotool key Alt_LL+Left'
     down: 
+      command: 'xdotool key Alt_L+Right'
+    right: 
+      command: 'xdotool key Control_L+Tab'
+    left: 
       command: 'xdotool key Control_L+Shift_L+Tab'
 pinch:
   2:
@@ -29,8 +29,8 @@ pinch:
       threshold: 0.1
 
 threshold:
-  swipe: 1
-  pinch: 1
+  swipe: 0.75
+  pinch: 0.75
 
 interval:
   swipe: 1
