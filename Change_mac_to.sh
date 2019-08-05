@@ -1,3 +1,5 @@
+#use sudo arp-scan -l to find target mac
+ 
 device=$(ip link show | grep wlp | cut -d" " -f2 | tr -d :)
 
 ip link show |tail |cat > 1.txt
