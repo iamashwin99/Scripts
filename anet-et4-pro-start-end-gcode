@@ -1,0 +1,30 @@
+M140 S50 ; set bed temp
+M105 ;report temps
+M190 S50 ; wait for bed temp
+M104 S180 ;set hot end temp
+M105 ;report temps
+M109 S180; wait for hot end temp
+M82 ;absolute extrusion mode
+G28 ; home all axes
+G29 ;auto level
+M104 S180 ;set hot end temp
+M105 ;report temps
+M109 S180; wait for hot end temp
+G92 E0
+G92 E0
+G1 Z15.0 F2000 ;Move the platform
+
+
+
+
+M104 S0 ; turn off extruder
+M140 S0 ; turn off bed
+G91 ; relative positioning
+G1 Z10 ; raise Z 10 mm
+G90 ; back to absolute positioning
+G1 X0 Y205 F1000 ; move finished print out front
+M84 ; disable motors
+M106 S0 ; turn off cooling fan
+M117 Print Complete
+M82 ;absolute extrusion mode
+M104 S0
